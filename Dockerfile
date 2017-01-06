@@ -1,10 +1,10 @@
-FROM ubuntu:16.04
+FROM ubuntu:14.04
 
 EXPOSE 80
 
 # update and upgrade packages
 RUN apt-get update && apt-get upgrade -y
-RUN apt-get install mysql-server apache2 php5 php5-gd texlive-latex-recommended php5-imap unzip wget php5-mysql -y samba-client
+RUN apt-get install -y mysql-server apache2 php5 php5-gd texlive-latex-recommended php5-imap unzip wget php5-mysql samba-client
 RUN apt-get clean
 
 RUN mkdir /var/lib/kOOL && cd /var/lib/kOOL && wget http://www.churchtool.org/fileadmin/user_upload/packages/kOOL_source_R45.zip && unzip kOOL_source_R45.zip
