@@ -17,8 +17,10 @@ rm -rf /var/run/mysqld/*
 rm -rf /var/run/apache2/apache2.pid
 /etc/init.d/apache2 start
 
+/usr/sbin/cron
+
 tail -f /var/log/apache2/access.log -f /var/log/apache2/error.log  &
 
 while true; do
-    sleep 20
+    sleep 1
 done
