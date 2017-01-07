@@ -19,7 +19,7 @@ RUN chown root:root /etc/cron.d/kool
 RUN chmod 0770 /etc/cron.d/kool
 
 ADD mrbs.zip /var/www/html/mrbs.zip
-RUN unzip /var/www/html/mrbs.zip && rm /var/www/html/mrbs.zip
+RUN cd /var/www/html/ && unzip /var/www/html/mrbs.zip && rm /var/www/html/mrbs.zip
 ADD config.inc.php /var/www/html/mrbs/config.inc.php
 
 RUN mkdir /data
