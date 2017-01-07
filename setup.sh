@@ -78,3 +78,11 @@ fi
 
 chmod -R 777 /data
 
+cd /var/www/html/mrbs
+
+if [ ! -f "/data/config.inc.php" ]; then
+  mv config.inc.php /data/config.inc.php
+fi
+rm config.inc.php
+ln -s /data/config.inc.php config.inc.php
+
