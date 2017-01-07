@@ -20,18 +20,6 @@ fi
 rm config/leute_formular.inc
 ln -s /data/leute_formular.inc config/leute_formular.inc
 
-if [ ! -d "/data/excel" ]; then
-  mv download/excel /data
-fi
-rm -rf download/excel
-ln -s /data/excel download/excel
-
-if [ ! -d "/data/pdf" ]; then
-  mv download/pdf /data
-fi
-rm -rf download/pdf
-ln -s /data/pdf download/pdf
-
 if [ ! -d "/data/my_images" ]; then
   mv my_images /data
 fi
