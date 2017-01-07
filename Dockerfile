@@ -12,7 +12,7 @@ RUN cd /var/lib/kOOL && wget https://github.com/smarty-php/smarty/archive/v2.6.2
 ADD ko.inc /var/lib/kOOL/lib/inc/ko.inc
 ADD kOOL.js /var/lib/kOOL/lib/inc/kOOL.js
 ADD index.php /var/lib/kOOL/lib/admin/index.php
-ADD menu.php /var/lib/kOOL/menu.php
+ADD menu.php /var/lib/kOOL/lib/menu.php
 RUN mkdir /var/www/html/kOOL && cp /var/lib/kOOL/lib/install/kOOL_setup.sh /var/www/html/kOOL && cd /var/www/html/kOOL && bash ./kOOL_setup.sh
 ADD kool.cron /etc/cron.d/kool
 RUN chown root:root /etc/cron.d/kool
