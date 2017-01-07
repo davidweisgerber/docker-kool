@@ -21,6 +21,7 @@ RUN chmod 0770 /etc/cron.d/kool
 ADD mrbs.zip /var/www/html/mrbs.zip
 RUN cd /var/www/html/ && unzip /var/www/html/mrbs.zip && rm /var/www/html/mrbs.zip
 ADD config.inc.php /var/www/html/mrbs/config.inc.php
+RUN locale-gen de_DE.UTF-8 && update-locale LANG=de_DE.UTF-8
 
 RUN mkdir /data
 
