@@ -17,6 +17,7 @@ RUN mkdir /var/www/html/kOOL && cp /var/lib/kOOL/lib/install/kOOL_setup.sh /var/
 ADD kool.cron /etc/cron.d/kool
 RUN chown root:root /etc/cron.d/kool
 RUN chmod 0664 /etc/cron.d/kool
+RUN /usr/sbin/php5enmod imap
 
 ADD mrbs.zip /var/www/html/mrbs.zip
 RUN cd /var/www/html/ && unzip /var/www/html/mrbs.zip && rm /var/www/html/mrbs.zip
