@@ -18,6 +18,8 @@ ADD kool.cron /etc/cron.d/kool
 RUN chown root:root /etc/cron.d/kool
 RUN chmod 0644 /etc/cron.d/kool
 RUN /usr/sbin/php5enmod imap
+RUN chmod 0777 /var/www/html/kOOL/download
+RUN chmod 0777 /var/www/html/kOOL/download/*
 
 ADD mrbs.zip /var/www/html/mrbs.zip
 RUN cd /var/www/html/ && unzip /var/www/html/mrbs.zip && rm /var/www/html/mrbs.zip
